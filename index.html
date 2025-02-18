@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="content">
+    <meta name="author" content="content">
+    <title>إصدار شهادة صحية</title>
+    <link rel="icon" type="image/x-icon" href="https://balady-gov.net/consolidated/images/fav.ico">
+    <link rel="stylesheet" href="https://baladyservices.website/files/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://baladyservices.website/files/css/style48da.css">
+    <link href="https://baladyservices.website/files/icons/fontawesome5/css/all.css" rel="stylesheet" type="text/css">
+    <link href="https://baladyservices.website/files/plugins/select2/css/select2.min.css" rel="stylesheet">
+    <link href="https://baladyservices.website/files/enhancement.css" rel="stylesheet" type="text/css">
+    <link href="https://baladyservices.website/files/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="https://baladyservices.website/files/Validation.css" rel="stylesheet" type="text/css">
+    <link href="https://baladyservices.website/files/HijriDatePicker/jquery.calendars.picker.css" rel="stylesheet">
+    <style>
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .data-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-69XYTDF1T2');
+    </script>
+</head>
+<body class="loged-user bg-grey loaded">
+    <div class="preloader" id="preloader-logo" style="opacity: 0.999445;">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="https://apps.balady.gov.sa/BALADYCDN/Content//images/logo.svg" alt="logo">
+            </div>
+            <div class="loader-figure"></div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('preloader-logo').style.display = 'none';
+        }, 2000);
+    </script>
+    <div class="container">
+        <div class="card p-lg-4">
+            <div class="card-body">
+                <!-- إضافة الصورة كرأس للصفحة -->
+                <div class="text-center">
+                    <img src="https://i.ibb.co/zVbjmdy/Picsart-25-02-10-11-14-25-801.jpg" alt="رأس الصفحة" class="header-image">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <div class="sub-heading">
+                            <h2 style="text-align: center; font-size: 24px; font-weight: bold; margin: 20px 0;">شهادة صحية سنوية</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="certificateContent">
+                    <div class="col-md-12" style="text-align: center;">
+                        <label for="imageUpload" style="cursor: pointer;">
+                            <img id="profileImage" width="150" height="200" class="m-3" src="https://baladyservices.website/assets/images/custom_pages/63849736-e202-4184-aa5e-a006db801760.jpg" alt="صورة شخصية">
+                        </label>
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    </div>
+                    <!-- الحقول -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="amana">
+                            <span>الأمانة</span>
+                        </div>
+                        <p class="data-value hide" id="amanaValue"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="baladia">
+                            <span>البلدية</span>
+                        </div>
+                        <p class="data-value hide" id="baladiaValue"></p>
+                    </div>
+                    <!-- بقية الحقول بنفس الطريقة -->
+                    <!-- الاسم -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="name">
+                            <span>الاسم</span>
+                        </div>
+                        <p class="data-value hide" id="nameValue"></p>
+                    </div>
+                    <!-- رقم الهوية -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label mb-4">
+                            <input class="form-control" type="text" id="idNumber">
+                            <span>رقم الهوية</span>
+                        </div>
+                        <p class="data-value hide" id="idNumberValue"></p>
+                    </div>
+                    <!-- الجنس -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="gender">
+                            <span>الجنس</span>
+                        </div>
+                        <p class="data-value hide" id="genderValue"></p>
+                    </div>
+                    <!-- الجنسية -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="nationality">
+                            <span>الجنسية</span>
+                        </div>
+                        <p class="data-value hide" id="nationalityValue"></p>
+                    </div>
+                    <!-- رقم الشهادة الصحية -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="certificateNumber">
+                            <span>رقم الشهادة الصحية</span>
+                        </div>
+                        <p class="data-value hide" id="certificateNumberValue"></p>
+                    </div>
+                    <!-- المهنة -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="profession">
+                            <span>المهنة</span>
+                        </div>
+                        <p class="data-value hide" id="professionValue"></p>
+                    </div>
+                    <!-- تاريخ الإصدار (ميلادي) -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="issueDateGregorian">
+                            <span>تاريخ إصدار الشهادة الصحية (ميلادي)</span>
+                        </div>
+                        <p class="data-value hide" id="issueDateGregorianValue"></p>
+                    </div>
+                    <!-- تاريخ الإصدار (هجري) -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="issueDateHijri">
+                            <span>تاريخ إصدار الشهادة الصحية (هجري)</span>
+                        </div>
+                        <p class="data-value hide" id="issueDateHijriValue"></p>
+                    </div>
+                    <!-- تاريخ الانتهاء (ميلادي) -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="expiryDateGregorian">
+                            <span>تاريخ انتهاء الشهادة الصحية (ميلادي)</span>
+                        </div>
+                        <p class="data-value hide" id="expiryDateGregorianValue"></p>
+                    </div>
+                    <!-- تاريخ الانتهاء (هجري) -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="expiryDateHijri">
+                            <span>تاريخ انتهاء الشهادة الصحية (هجري)</span>
+                        </div>
+                        <p class="data-value hide" id="expiryDateHijriValue"></p>
+                    </div>
+                    <!-- نوع البرنامج التثقيفي -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="programType">
+                            <span>نوع البرنامج التثقيفي</span>
+                        </div>
+                        <p class="data-value hide" id="programTypeValue"></p>
+                    </div>
+                    <!-- تاريخ انتهاء البرنامج التثقيفي -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="programExpiryDate">
+                            <span>تاريخ انتهاء البرنامج التثقيفي</span>
+                        </div>
+                        <p class="data-value hide" id="programExpiryDateValue"></p>
+                    </div>
+                    <!-- رقم الرخصة -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="licenseNumber">
+                            <span>رقم الرخصة</span>
+                        </div>
+                        <p class="data-value hide" id="licenseNumberValue"></p>
+                    </div>
+                    <!-- اسم المنشأة -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="establishmentName">
+                            <span>اسم المنشآة</span>
+                        </div>
+                        <p class="data-value hide" id="establishmentNameValue"></p>
+                    </div>
+                    <!-- رقم المنشأة -->
+                    <div class="col-md-6">
+                        <div class="form-group has-float-label">
+                            <input class="form-control" type="text" id="establishmentNumber">
+                            <span>رقم المنشأة</span>
+                        </div>
+                        <p class="data-value hide" id="establishmentNumberValue"></p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-success btn-lg" style="font-size: 18px; padding: 10px 30px;" onclick="generateCertificate()">حفظ الشهادة الصحية</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- تضمين مكتبة JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- سكريبت لتحديث المحتوى بناءً على المدخلات -->
+    <script>
+        function generateCertificate() {
+            // جمع البيانات من الحقول
+            var fields = ['amana', 'baladia', 'name', 'idNumber', 'gender', 'nationality', 'certificateNumber', 'profession', 'issueDateGregorian', 'issueDateHijri', 'expiryDateGregorian', 'expiryDateHijri', 'programType', 'programExpiryDate', 'licenseNumber', 'establishmentName', 'establishmentNumber'];
+            
+            fields.forEach(function(field) {
+                var value = document.getElementById(field).value;
+                // إخفاء الحقل وإظهار القيمة
+                document.getElementById(field).parentNode.style.display = 'none';
+                var valueElement = document.getElementById(field + 'Value');
+                valueElement.textContent = value;
+                valueElement.classList.remove('hide');
+            });
+
+            // إخفاء زر الحفظ
+            event.target.style.display = 'none';
+
+            // إخفاء زر تحميل الصورة
+            document.getElementById('imageUpload').style.display = 'none';
+            
+            alert('تم حفظ الشهادة الصحية بالبيانات المدخلة. يمكنك الآن حفظ الصفحة أو طباعتها.');
+
+            // إيقاف أي تصرف افتراضي للزر
+            return false;
+        }
+
+        document.getElementById('imageUpload').onchange = function (evt) {
+            var tgt = evt.target || window.event.srcElement,
+                files = tgt.files;
+
+            // دعم FileReader
+            if (FileReader && files && files.length) {
+                var fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('profileImage').src = fr.result;
+                }
+                fr.readAsDataURL(files[0]);
+            } else {
+                // عدم دعم FileReader
+                alert('المتصفح لا يدعم وظيفة تحميل الصورة.');
+            }
+        };
+
+    </script>
+</body>
+</html>
